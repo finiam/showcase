@@ -1,17 +1,13 @@
-import { getAllProjects } from "$lib/cms";
+import { getCMSData } from "$lib/cms";
 import { error } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
 
 export const load = (async () => {
-  const data = await getAllProjects();
-
-  console.log(data);
+  const data = await getCMSData();
 
   if (!data) {
-    throw error(500, "It broke");
+    throw error(500, "Something went wrong");
   }
 
-  return {
-    projects: data.allProject,
-  };
+  return data;
 }) satisfies PageServerLoad;
