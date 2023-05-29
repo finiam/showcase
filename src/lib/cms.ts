@@ -1,7 +1,7 @@
 import request from "graphql-request";
 import { query, types, alias } from "typed-graphqlify";
 
-const CategoryQuery = {
+const TagsQuery = {
   _id: types.string,
   slug: {
     current: types.string,
@@ -15,7 +15,7 @@ const getDataQuery = query("GetData", {
       _id: types.string,
       name: types.string,
       description: types.string,
-      category: [CategoryQuery],
+      tags: [TagsQuery],
       image: {
         asset: {
           url: types.string,
@@ -23,7 +23,7 @@ const getDataQuery = query("GetData", {
       },
     },
   ],
-  allProjectCategory: [CategoryQuery],
+  allProjectTag: [TagsQuery],
 });
 
 /* const CMS_QUERY = `
