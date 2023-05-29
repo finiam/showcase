@@ -6,6 +6,7 @@
   import Layout from "./components/Layout.svelte";
   import "../app.css";
   import Hero from "./components/Hero.svelte";
+  import Button from "$lib/components/Button.svelte";
 
   export let data: PageData;
 
@@ -26,23 +27,26 @@
   $: console.log(projects);
 </script>
 
-<!-- <h1>Finiam showcase</h1>
-
-<div>
-  <h2>Tags - {activeTag?.title || "all"}</h2>
-  {#each data.allProjectTag as tag (tag._id)}
-    <a href="/?tag={tag.slug.current}">{tag.title}</a>
-  {/each}
-</div>
-
-{#each projects as item (item._id)}
-  <p>{item.name}</p>
-{/each} -->
-
 <Layout>
   <Header slot="header" />
   <div slot="body">
     <Hero />
+    <div class="max-w-6xl mx-auto flex flex-col gap-32 py-32">
+      <section>
+        <p class="text-f-base opacity-40 mb-5">Our culture</p>
+        <h2 class="text-f-2xl max-w-xl">
+          This is the playground for complex minds that make it simple.
+        </h2>
+      </section>
+      <div class="flex gap-3">
+        <Button as="a" href="/" className="text-f-lg py-7">All</Button>
+        {#each data.allProjectTag as tag (tag._id)}
+          <Button href="/?tag={tag.slug.current}" className="bg-f-orange">
+            {tag.title}
+          </Button>
+        {/each}
+      </div>
+    </div>
   </div>
   <Footer slot="footer" />
 </Layout>

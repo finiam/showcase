@@ -59,10 +59,9 @@
       href="https://blog.finiam.com/">Blog</a
     >
     <Button
-      as="a"
       href="https://calendly.com/jfsgomes/meet-and-greet"
       target="_blank"
-      className="text-f-xl mt-16 lg:m-0 lg:text-f-base"
+      className="text-f-xl mt-16 lg:m-0 lg:text-f-base bg-f-orange"
     >
       Let's talk
     </Button>

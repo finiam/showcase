@@ -1,5 +1,5 @@
 <slot name="header" />
-<main>
+<main class="bg-f-beige">
   <slot name="body" />
 </main>
 <slot name="footer" />
