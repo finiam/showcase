@@ -26,31 +26,6 @@ const getDataQuery = query("GetData", {
   allProjectTag: [TagsQuery],
 });
 
-/* const CMS_QUERY = `
-  query {
-    allProject {
-      id: _id
-      name
-      description
-      image {
-        asset {
-          url
-          metadata {
-            lqip
-          }
-        }
-      }
-    }
-    allProjectCategory {
-      id: _id
-      slug {
-        current
-      }
-      title
-    }
-  }
-`; */
-
 export async function getCMSData() {
   try {
     const query = await request<(typeof getDataQuery)["data"]>(
