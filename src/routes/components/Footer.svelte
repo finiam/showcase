@@ -2,11 +2,11 @@
   import Button from "$lib/components/Button.svelte";
 </script>
 
-<footer class="relative bg-f-green pt-32 pb-9 text-f-beige text-f-lg">
+<footer class="relative bg-f-green pt-32 pb-14 text-f-beige text-f-lg">
   <div
     class="absolute inset-0 m-auto w-[449px] h-[449px] bg-f-violet rounded-full z-0"
   />
-  <section class="relative max-w-6xl mx-auto flex flex-col gap-60">
+  <section class="relative max-w-[1208px] mx-auto flex flex-col gap-60">
     <div class="flex justify-between items-start">
       <ul class="flex flex-col flex-wrap w-56 max-h-36 gap-6">
         <li>
@@ -52,11 +52,27 @@
         Let's build the next big thing, together.
       </h2>
       <div class="flex gap-4 items-center">
-        <Button outline className="text-f-white">contact@finiam.com</Button>
-        <Button outline className="text-f-white">TW</Button>
-        <Button outline className="text-f-white">IN</Button>
+        <Button
+          target="_blank"
+          outline
+          className="text-f-white"
+          href="mailto:contact@finiam.com">contact@finiam.com</Button
+        >
+        <Button
+          target="_blank"
+          outline
+          className="text-f-white"
+          href="https://twitter.com/wearefiniam">TW</Button
+        >
+        <Button
+          target="_blank"
+          outline
+          className="text-f-white"
+          href="https://www.linkedin.com/company/finiam/">IN</Button
+        >
         <a
-          href="https://ondastudio.co"
+          target="_blank"
+          href="https://www.ondastudio.co/"
           class="text-f-lg text-f-beige opacity-50 ml-auto">Shaped by Onda</a
         >
       </div>

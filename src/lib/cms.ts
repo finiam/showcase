@@ -9,11 +9,14 @@ const TagsQuery = {
   title: types.string,
 };
 
-const getDataQuery = query("GetData", {
+export const getDataQuery = query("GetData", {
   allProject: [
     {
       _id: types.string,
       name: types.string,
+      slug: {
+        current: types.string,
+      },
       description: types.string,
       tags: [TagsQuery],
       image: {
@@ -32,8 +35,6 @@ export async function getCMSData() {
       import.meta.env.VITE_CMS_URL,
       getDataQuery.toString()
     );
-
-    console.log(query);
 
     return query;
   } catch (err) {
