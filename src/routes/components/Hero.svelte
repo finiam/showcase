@@ -8,6 +8,6 @@
 
 <style>
   .root {
-    background-image: url("images/hero_bg_1.png");
+    background-image: url("/images/hero_bg_1.png");
   }
 </style>

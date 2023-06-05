@@ -2,7 +2,7 @@
   font-family: "Studio Feixen Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/StudioFeixenSans-Regular.otf");
+  src: url("/fonts/StudioFeixenSans-Regular.otf");
 }
 
 @tailwind base;
