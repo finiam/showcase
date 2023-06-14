@@ -10,7 +10,8 @@ export default {
         "f-lg": ["1.25rem", { lineHeight: "auto" }],
         "f-xl": ["1.75rem", { lineHeight: "auto" }],
         "f-2xl": ["3rem", { lineHeight: "3.5rem", letterSpacing: "-.03em" }],
-        "f-3xl": ["7rem", { lineHeight: "112%", letterSpacing: "-.03em" }],
+        "f-3xl": ["4.375rem", { lineHeight: "5rem", letterSpacing: "-.03em" }],
+        "f-4xl": ["7rem", { lineHeight: "112%", letterSpacing: "-.03em" }],
       },
       colors: {
         "f-white": "#fff",

@@ -1,5 +1,5 @@
 import request from "graphql-request";
-import { query, types, alias } from "typed-graphqlify";
+import { query, types, params } from "typed-graphqlify";
 
 const TagsQuery = {
   _id: types.string,
@@ -7,10 +7,11 @@ const TagsQuery = {
     current: types.string,
   },
   title: types.string,
+  color: { hex: types.string },
 };
 
 export const getDataQuery = query("GetData", {
-  allProject: [
+  allProject: params({ sort: { orderRank: "ASC" } }, [
     {
       _id: types.string,
       name: types.string,
@@ -19,15 +20,20 @@ export const getDataQuery = query("GetData", {
       },
       description: types.string,
       tags: [TagsQuery],
+      githubUrl: types.string,
+      url: types.string,
       image: {
         asset: {
           url: types.string,
         },
       },
     },
-  ],
-  allProjectTag: [TagsQuery],
+  ]),
+  allProjectTag: params({ sort: { orderRank: "ASC" } }, [TagsQuery]),
 });
+
+export type Project = (typeof getDataQuery)["data"]["allProject"][number];
+export type ProjectTag = (typeof getDataQuery)["data"]["allProjectTag"][number];
 
 export async function getCMSData() {
   try {

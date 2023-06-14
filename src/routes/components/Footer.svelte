@@ -2,12 +2,14 @@
   import Button from "$lib/components/Button.svelte";
 </script>
 
-<footer class="relative bg-f-green pt-32 pb-14 text-f-beige text-f-lg">
+<footer
+  class="relative bg-f-green px-4 pt-16 lg:pt-32 pb-14 text-f-beige text-f-lg"
+>
   <div
-    class="absolute inset-0 m-auto w-[449px] h-[449px] bg-f-violet rounded-full z-0"
+    class="absolute inset-0 m-auto -top-20 w-[287px] lg:w-[449px] max-w-full aspect-square bg-f-violet rounded-full z-0"
   />
   <section class="relative max-w-[1208px] mx-auto flex flex-col gap-60">
-    <div class="flex justify-between items-start">
+    <div class="flex flex-wrap gap-5 justify-between items-start">
       <ul class="flex flex-col flex-wrap w-56 max-h-36 gap-6">
         <li>
           <a href="https://finiam.com">Finiam</a>
@@ -33,14 +35,14 @@
         <Button
           href="https://calendly.com/jfsgomes/meet-and-greet"
           target="_blank"
-          className="bg-f-white "
+          bgColor="#fff"
         >
           Book a call
         </Button>
         <Button
           href="https://finiam.homerun.co"
           target="_blank"
-          className="bg-f-pistachio"
+          bgColor="#dedb7b"
         >
           Join our team
         </Button>
@@ -48,10 +50,10 @@
     </div>
 
     <div>
-      <h2 class="mb-16 text-f-3xl text-f-beige">
+      <h2 class="mb-16 text-f-xl lg:text-f-4xl text-f-beige">
         Let's build the next big thing, together.
       </h2>
-      <div class="flex gap-4 items-center">
+      <div class="flex flex-wrap gap-4 items-center">
         <Button
           target="_blank"
           outline

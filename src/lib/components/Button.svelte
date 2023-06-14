@@ -1,16 +1,19 @@
 <script lang="ts">
+  import { textForBackground } from "$lib/utils";
+
   type $$Props = Partial<HTMLAnchorElement> & {
     className?: string;
     outline?: boolean;
     noScroll?: boolean;
+    bgColor?: string;
   };
 
-  export let className = "";
+  export let bgColor = "transparent";
   export let outline = false;
   export let noScroll = false;
+  export let className = "";
 
-  let baseCls =
-    "root text-f-dark-gray text-f-lg rounded-full min-w-[100px] w-fit pointer";
+  let baseCls = `root py-[0.8rem] lg:py-[1.1rem] px-[1.85rem] lg:px-[2.2rem] text-f-dark-gray text-f-base lg:text-f-lg rounded-full lg:min-w-[100px] w-fit pointer ${className}`;
 
   if (outline) {
     baseCls += ` border border-beige bg-transparent`;
@@ -20,7 +23,8 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <a
   {...$$restProps}
-  class="{baseCls} {className}"
+  class={baseCls}
+  style="background-color: {bgColor}; color: {textForBackground(bgColor)}"
   data-sveltekit-noscroll={noScroll ? "" : "off"}
 >
   <slot />
@@ -28,10 +32,9 @@
 
 <style>
   .root {
-    padding: 1.1rem 2.2rem;
     transition: transform 0.25s ease;
   }
   .root:hover {
-    transform: scale(1.06);
+    transform: scale(1.03);
   }
 </style>
