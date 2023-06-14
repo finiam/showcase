@@ -10,6 +10,9 @@
   export let data: LayoutData;
 </script>
 
+<svelte:head>
+  <title>Finiam Showcase</title>
+</svelte:head>
 <Layout>
   <Header slot="header" />
   <div slot="body">
