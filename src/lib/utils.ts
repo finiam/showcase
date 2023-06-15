@@ -1,9 +1,3 @@
-export function prettifyUrl(url: string) {
-  let noProtocol = url.replace("https://", "");
-
-  return noProtocol.endsWith("/") ? noProtocol.slice(0, -1) : noProtocol;
-}
-
 export function textForBackground(bg = "") {
   if (bg === "transparent") {
     return "";
