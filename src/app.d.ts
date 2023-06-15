@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { Projects, ProjectTag } from "$lib/cms";
+import type { Event, Projects, ProjectTag } from "$lib/cms";
 
 // for information about these interfaces
 declare global {
@@ -10,6 +10,7 @@ declare global {
     interface PageData {
       allProject: Project[];
       allProjectTag: ProjectTag[];
+      allEvent: Event[];
     }
     // interface Platform {}
   }

@@ -9,8 +9,5 @@ export const load = (async () => {
     throw error(500, "Something went wrong");
   }
 
-  return {
-    allProject: data.allProject,
-    allProjectTag: data.allProjectTag,
-  };
+  return data;
 }) satisfies LayoutServerLoad;
