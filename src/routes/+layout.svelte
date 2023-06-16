@@ -3,9 +3,9 @@
   import Header from "./components/Header.svelte";
   import Hero from "./components/Hero.svelte";
   import TagFilter from "./components/TagFilter.svelte";
-  import "../app.css";
   import { page } from "$app/stores";
   import EventCard from "./components/EventCard.svelte";
+  import "../app.css";
 </script>
 
 <svelte:head>
@@ -16,7 +16,7 @@
 
 <main class="bg-f-beige">
   <Hero />
-  <div class="max-w-[1208px] mx-auto px-4 flex flex-col gap-32 py-32">
+  <div class="max-w-[1208px] mx-auto px-4 flex flex-col gap-16 lg:gap-32 py-32">
     <section>
       <p class="text-f-base opacity-40 mb-5">Our culture</p>
       <h2 class="text-f-2xl max-w-xl">
@@ -24,12 +24,12 @@
       </h2>
     </section>
     <TagFilter />
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-9 items-start">
-      <slot />
-    </section>
+
+    <slot />
+
     <section>
       <p class="text-f-base opacity-40 mb-5">Our community impact</p>
-      <h2 class="text-f-3xl">
+      <h2 class="text-f-2xl lg:text-f-3xl">
         Spreading knowledge around blockchain, crypto, web3 and building the
         Starknet community in Portugal
       </h2>

@@ -2,12 +2,14 @@
   import { textForBackground } from "$lib/utils";
 
   type $$Props = Partial<HTMLAnchorElement> & {
+    as?: "button" | "a";
     className?: string;
     outline?: boolean;
     noScroll?: boolean;
     bgColor?: string;
   };
 
+  export let as = "a";
   export let bgColor = "transparent";
   export let outline = false;
   export let noScroll = false;
@@ -20,15 +22,16 @@
   }
 </script>
 
-<!-- svelte-ignore a11y-missing-attribute -->
-<a
-  {...$$restProps}
+<svelte:element
+  this={as}
   class={baseCls}
   style="background-color: {bgColor}; color: {textForBackground(bgColor)}"
   data-sveltekit-noscroll={noScroll ? "" : "off"}
+  on:click
+  {...$$restProps}
 >
   <slot />
-</a>
+</svelte:element>
 
 <style>
   .root {

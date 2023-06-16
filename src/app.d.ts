@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { Event, Projects, ProjectTag } from "$lib/cms";
+import type { Event, Project, ProjectTag } from "$lib/cms";
 
 // for information about these interfaces
 declare global {

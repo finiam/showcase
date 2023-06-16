@@ -18,8 +18,13 @@ const EventQuery = {
       url: types.string,
     },
   },
-  eventUrl: types.string,
-  tgUrl: types.string,
+  links: [
+    {
+      _key: types.string,
+      title: types.string,
+      url: types.string,
+    },
+  ],
 };
 
 export const getDataQuery = query("GetData", {

@@ -1,10 +1,5 @@
 <script lang="ts">
-  import ProjectCard from "../components/ProjectCard.svelte";
-  import type { PageData } from "./$types";
-
-  export let data: PageData;
+  import ProjectGrid from "../components/ProjectGrid.svelte";
 </script>
 
-{#each data.filteredProjects as project (project._id)}
-  <ProjectCard {project} />
-{/each}
+<ProjectGrid />

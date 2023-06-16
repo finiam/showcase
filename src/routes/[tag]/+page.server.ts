@@ -8,6 +8,6 @@ export const load: PageServerLoad = async ({ params, parent }) => {
   );
 
   return {
-    filteredProjects,
+    allProject: filteredProjects,
   };
 };
